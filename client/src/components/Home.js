@@ -20,10 +20,7 @@ function Home() {
       body: dataToSend,
     };
 
-    let JSONData = await fetch(
-      "http://localhost:5678/deleteProfile",
-      reqOptions
-    );
+    let JSONData = await fetch("/deleteProfile", reqOptions);
 
     let JSOData = await JSONData.json();
 
@@ -43,9 +40,7 @@ function Home() {
         {`${storeObj.loginReducer.userDetails.firstName} 
         ${storeObj.loginReducer.userDetails.lastName}`}
       </h2>
-      <img
-        src={`http://localhost:5678/${storeObj.loginReducer.userDetails.profilePic}`}
-      ></img>
+      <img src={`/${storeObj.loginReducer.userDetails.profilePic}`}></img>
       <button
         type="button"
         onClick={() => {

@@ -22,10 +22,7 @@ function Login() {
         body: dataToSend,
       };
 
-      let JSONData = await fetch(
-        "http://localhost:5678/loginWithToken",
-        reqOptions
-      );
+      let JSONData = await fetch("/loginWithToken", reqOptions);
 
       let JSOData = await JSONData.json();
 
@@ -52,7 +49,7 @@ function Login() {
         body: dataToSend,
       };
 
-      let JSONData = await fetch("http://localhost:5678/login", reqOptions);
+      let JSONData = await fetch("/login", reqOptions);
 
       let JSOData = await JSONData.json();
 
@@ -80,7 +77,7 @@ function Login() {
       body: dataToSend,
     };
 
-    let JSONData = await fetch("http://localhost:5678/login", reqOptions);
+    let JSONData = await fetch("/login", reqOptions);
 
     let JSOData = await JSONData.json();
 
